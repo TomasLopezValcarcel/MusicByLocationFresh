@@ -47,7 +47,7 @@ class StateController: ObservableObject {
     func parseJson(json: Data) -> ArtistResponse? {
         let decoder = JSONDecoder()
         
-        if let artistResponse = try?decoder.decode(ArtistResponse.self, from: json){
+        if let artistResponse = try?decoder.decode(ArtistResponse.self, from: json) {
             return artistResponse
         } else {
             print("Error decoding JSON")
